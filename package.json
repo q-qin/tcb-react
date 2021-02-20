@@ -1,5 +1,5 @@
 {
-  "name": "rect-demo",
+  "name": "tcb-react",
   "version": "0.1.0",
   "dependencies": {
     "antd": "^4.4.2",
@@ -17,6 +17,7 @@
     "deploy:server": "cloudbase framework deploy function",
     "eject": "react-scripts eject"
   },
+  "homepage":".",
   "eslintConfig": {
     "extends": "react-app"
   },
