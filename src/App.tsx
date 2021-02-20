@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Skeleton } from 'antd'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { RenderRoutes, appRoutes } from './routes'
 import { MainLayout } from './layout'
 import 'antd/dist/antd.css'
@@ -36,8 +36,8 @@ function App() {
 
 export default () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   )
 }

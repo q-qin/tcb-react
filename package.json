@@ -17,7 +17,7 @@
     "deploy:server": "cloudbase framework deploy function",
     "eject": "react-scripts eject"
   },
-  "homepage":".",
+  "homepage": ".",
   "eslintConfig": {
     "extends": "react-app"
   },
