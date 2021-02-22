@@ -8,12 +8,14 @@ const { Search } = Input
 const ticketUrl = `https://${config.envId}.service.tcloudbase.com/login`
 
 export const Home: React.FC<{}> = () => {
+  
   const app = getApp()
   const [loginLoading, setLoginLoading] = useState(false)
 
   // 检测登录状态
   const loginState = app.auth().getLoginState()
   const login = !!loginState
+  console.log(3);
   const customLogin = async (userId: string) => {
     if (!userId) {
       message.error('用户名不能为空！')
@@ -37,6 +39,7 @@ export const Home: React.FC<{}> = () => {
     window.location.reload()
   }
 
+  
   return (
     <div>
       <div className="text-center">

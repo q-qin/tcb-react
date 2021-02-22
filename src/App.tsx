@@ -3,13 +3,16 @@ import { Skeleton } from 'antd'
 import { HashRouter } from 'react-router-dom'
 import { RenderRoutes, appRoutes } from './routes'
 import { MainLayout } from './layout'
+import { AuthRoute } from "@/components/AuthRoute";
 import 'antd/dist/antd.css'
 import './App.less'
 
 const menus = appRoutes.filter((item) => item.menu)
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  console.log(1);
+  const [logined, setLogined ] = useState(false)
+  const [jsload, setJsload ] = useState(false)
   const loadScript = async () => {
     const script = document.createElement('script')
     script.type = 'text/javascript'
@@ -24,12 +27,17 @@ function App() {
   }
 
   loadScript().then(() => {
-    setLoading(false)
+    setJsload(true);
   })
 
   return (
     <div className="App">
-      <MainLayout menus={menus}>{loading ? <Skeleton active /> : RenderRoutes()}</MainLayout>
+      {logined && jsload && (
+        <MainLayout menus={menus}>{RenderRoutes()}</MainLayout>
+      )}
+      {!logined && (
+        <div>未登录</div>
+      )}
     </div>
   )
 }
@@ -37,6 +45,7 @@ function App() {
 export default () => {
   return (
     <HashRouter>
+      <AuthRoute></AuthRoute>
       <App />
     </HashRouter>
   )

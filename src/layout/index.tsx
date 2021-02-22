@@ -18,7 +18,7 @@ export function MainLayout(props: React.PropsWithChildren<ILayoutProps>) {
   const year = new Date().getFullYear()
 
   return (
-    <div className="App">
+    <div className="MainLayout">
       <Layout style={{ height: '100%' }}>
         <Header className="header flex">
           <div className="logo">
