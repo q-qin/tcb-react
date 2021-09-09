@@ -1,0 +1,10 @@
+const COUNT = 'COUNT'
+const THEME = 'THEME'
+const SETTING = 'SETTING'
+const THEMECOLOR = 'THEMECOLOR'
+export {
+  COUNT,
+  THEME,
+  SETTING,
+  THEMECOLOR
+}
